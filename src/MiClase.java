@@ -22,26 +22,30 @@ public class MiClase {
 			
 			opcion=s.nextInt();
 			
-			if(opcion == 1)
+			switch (opcion)
 			{
-				int pos;
-				String nombre;
-				int numero;
-				System.out.println("Ingrese la posicion: ");
-				pos=s.nextInt();
-				System.out.println("Ingrese el nombre: ");
-				nombre=s.next();
-				System.out.println("Ingrese el numero: ");
-				numero=s.nextInt();
-				nombres[pos]=nombre;
-				telefonos[pos]=numero;
-			}
-			if(opcion == 2)
-			{
-				int pos;
-				System.out.println("Ingrese la poscion: ");
-				pos = s.nextInt();
-				System.out.println(nombres[pos]+" - "+telefonos[pos]);
+				case 1:
+					int pos;
+					String nombre;
+					int numero;
+					System.out.println("Ingrese la posicion: ");
+					pos=s.nextInt();
+					System.out.println("Ingrese el nombre: ");
+					nombre=s.next();
+					System.out.println("Ingrese el numero: ");
+					numero=s.nextInt();
+					nombres[pos]=nombre;
+					telefonos[pos]=numero;
+					break;
+				case 2:
+					int pos2;
+					System.out.println("Ingrese la poscion: ");
+					pos2 = s.nextInt();
+					System.out.println(nombres[pos2]+" - "+telefonos[pos2]);
+					break;
+				default:
+					System.out.println("Opcion invalida");
+					break;
 			}
 		}
 		
